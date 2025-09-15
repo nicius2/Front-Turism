@@ -12,7 +12,7 @@ export function Input({ namePlaceholder, icon, ...rest }: Props) {
             <input
                 {...rest}
                 placeholder={namePlaceholder}
-                className={`border border-zinc-700 rounded-2xl w-full py-3 px-5
+                className={`border border-zinc-500 rounded-2xl w-full py-3 px-5
                     focus:outline-none focus:ring-0
                     ${icon ? "pr-12" : ""}`}
             />

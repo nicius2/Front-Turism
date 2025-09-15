@@ -8,8 +8,7 @@ export default {
         extend: {
             backgroundImage: {
                 'login': "url('./src/assets/background.svg')"
-            }
+            },
         },
     },
-    plugins: [],
 }
