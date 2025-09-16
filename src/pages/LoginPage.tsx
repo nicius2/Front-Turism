@@ -9,6 +9,7 @@ import { Input } from "../components/Input"
 import { PasswordInput } from "../components/PasswordInput"
 import { Button } from "../components/Button"
 import { AuthLayout } from "../components/AuthLayout"
+import { TextError } from "../components/textError"
 
 const loginSchema = z.object({
     email: z.string().email("Email inválido"),
@@ -60,9 +61,7 @@ export function LoginPage() {
                             icon={<img src={emailIcon} alt="Email" className="w-5 h-5" />}
                         />
                         {errors.email && (
-                            <span className="text-red-500 font-medium text-sm mt-1 block">
-                                {errors.email}
-                            </span>
+                            <TextError>{errors.email}</TextError>
                         )}
                     </div>
                     <div>
@@ -72,9 +71,7 @@ export function LoginPage() {
                             onChange={(e) => setSenha(e.target.value)}
                         />
                         {errors.senha && (
-                            <span className="text-red-500 font-medium text-sm mt-1 block">
-                                {errors.senha}
-                            </span>
+                            <TextError>{errors.senha}</TextError>
                         )}
                         <a href="">
                             <span className="text-xs flex mt-2 justify-end text-zinc-600 hover:text-amber-500 transition ease-linear">
