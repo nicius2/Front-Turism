@@ -20,6 +20,6 @@ export const cadastroSchema = z.object({
     path: ["confirmarSenha"] // define em qual campo mostra o erro
 })
 
-// Derivações do Schema
+// Derivações do Schema 
 export type LoginData = z.infer<typeof loginSchema>
 export type CadastroData = z.infer<typeof cadastroSchema>
